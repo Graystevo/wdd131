@@ -1,0 +1,70 @@
+
+
+
+
+
+
+
+/* Main body content */
+main body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+main {
+    font-family: "Times New Roman", serif;
+    font-size: 20px;
+    line-height: 1.5;
+    border: 1px solid #242424;  /* Black border with 2px width */
+    margin: 50px 30px;  /* Add some spacing around the main section */
+}
+main h1, h2 {
+    text-transform: uppercase;
+    text-align: center;
+}
+.content{
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;  /* Left-align the paragraphs */
+    padding-top: 60px;
+}
+.statement-top h1 {
+    font-size: 2em;
+    font-weight: lighter;
+    margin-bottom: 12px;
+    letter-spacing: 3.5px;
+}
+
+.statement-top h2 {
+    color: #006EB6;
+    margin-bottom: 50px;
+    font-size: smaller;
+    font-weight: lighter;
+    letter-spacing: 3.5px;
+    border-bottom-style:inset;
+}
+main p {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+main p em {
+    font-style: italic;
+
+}
+
+/* Ordered list */
+.list-of-stuff {
+    margin-bottom: 40px;
+
+}
+
+.list-of-stuff li {
+    margin-bottom: 20px;
+}
+
+main img {
+    max-width: 150px;
+    height: auto;
+    margin: 20px 400px;  /* Center the image with auto margins */
+}
+
