@@ -113,36 +113,45 @@ img {
     object-fit: cover;
 }
 
+/* Modal container */
 .viewer {
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.75); 
-    display: grid; /* Use grid to center content */
-    grid-template-rows: auto 1fr; /* Two rows: one for the button, one for the image */
-    place-items: center; 
-    z-index: 10; 
-}
+    right: 0;
+    background: rgba(0, 0, 0, 0.75); /* Semi-transparent background */
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-rows: 1fr 6fr 1fr;
+    place-items: center; /* Centers the image in the modal */
+    z-index: 10; /* Makes sure it appears above all other elements */
+  }
+  
+  /* Close button */
+  .close-viewer {
+    grid-column: 2/3;
+    top: 20px;
+    right: 20px;
+    background: rgb(70, 70, 70);
+    width: 60px;
+    margin-top: 20px;
+    color: white;
+    border: none;
+    font-size: 4rem;
+    cursor: pointer;
+    z-index: 11; 
+  }
+  
+  /* Image styles */
+  .viewer img {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    max-width: 100%; 
+    max-height: 100%;
+    border: none;
+  }
 
-.viewer img {
-  max-width: 100%; 
-  max-height: 100%; 
-  object-fit: contain; 
-}
-
-.viewer button.close-viewer {
-  position: absolute; /* Position it in the corner of the modal */
-  top: 20px;
-  right: 20px;
-  background: none;
-  color: white;
-  border: none;
-  font-size: 2rem;
-  cursor: pointer;
-  z-index: 11; 
-}
 
 .viewer.hide {
   display: none; /* Hide the modal initially */
