@@ -1,64 +1,66 @@
 
 /* Main body content */
-main body, h1, h2, p, ul, li {
-    margin: 0;
-    padding: 0;
-}
-main {
+
+.content {
     font-family: "Times New Roman", serif;
     font-size: 20px;
     line-height: 1.5;
     border: 1px solid #242424;  /* Black border with 2px width */
-    margin: 50px 30px;  /* Add some spacing around the main section */
+
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 130px;
+    padding-bottom: 40px;
+    padding-top: 75px;
+    text-align: left;  /* Left-align the paragraphs */
 }
-main h1, h2 {
+.title h1, h2 {
     text-transform: uppercase;
     text-align: center;
+    margin: 0;
 }
-.content{
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: left;  /* Left-align the paragraphs */
-    padding-top: 60px;
-}
-.statement-top h1 {
+.title h1 {
     font-size: 2em;
     font-weight: lighter;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
     letter-spacing: 3.5px;
 }
 
-.statement-top h2 {
+.title h2 {
     color: #006EB6;
-    margin-bottom: 50px;
+    margin-bottom: 45px;
     font-size: smaller;
     font-weight: lighter;
     letter-spacing: 3.5px;
     border-bottom-style:inset;
 }
-main p {
-    margin-bottom: 20px;
+p:nth-of-type(1) {
+    margin-top: 0px;
+}
+p {
+
     text-align: left;
 }
 
-main p em {
+p em {
     font-style: italic;
-
 }
 
 /* Ordered list */
-.list-of-stuff {
+.does-list {
     margin-bottom: 40px;
 
 }
 
-.list-of-stuff li {
+.does-list li {
     margin-bottom: 20px;
 }
 
-main img {
+footer img {
     max-width: 150px;
     height: auto;
-    margin: 20px 400px;  /* Center the image with auto margins */
+    /* align img to center */
 }
-
+footer {
+    text-align: center;
+}
