@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    font-family: Ubuntu, sans-serif;
+    font-size: 14px;
+    
+}
+
+.gridarea {
+    display: grid;
+    /* grid-gap: 7px; */
+    grid-template-columns: 1fr;
+    grid-template-areas:  "main";
+    place-items: center; /* Centers both horizontally and vertically */
+}
+
+header,
+nav {
+    border: 1px solid #8755d6;
+}
+
+header {
+    background-color: #8755d6;
+}
+
+button {
+    background:none;
+    color:#ffffff;
+    border: none;
+    /* text-decoration: underline; */
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+figure { 
+    margin: 10px;
+}
+
+.header-nav {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0px;
+    gap: 5px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    font-size: 2.5rem;
+    background-color: #8755d6;
+    color: white;
+
+}
+
+.header-nav ul {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0px;
+    gap: 25px;
+    list-style-type: none;
+}
+
+nav ul li a {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #d1cdcd;
+}
+
+.menu-button {
+    cursor: pointer;
+    padding: 4px;
+    margin-bottom: 10px;
+}
+.menu-button:hover {
+    background-color: #979797;
+}
+
+.header-nav .hide {
+    display: none;
+}
+
+section.gridarea {
+    text-align: center;
+    margin:0;
+}
+
+main {
+    background-color: lightgray;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+img {
+    max-width: 250px;
+    max-height: 250px;
+    box-shadow: 0 0 5px #000;
+    border: 5px solid #ffffff; /* Solid border */
+    object-fit: cover;
+}
+
+.viewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75); 
+    display: grid; /* Use grid to center content */
+    grid-template-rows: auto 1fr; /* Two rows: one for the button, one for the image */
+    place-items: center; 
+    z-index: 10; 
+}
+
+.viewer img {
+  max-width: 100%; 
+  max-height: 100%; 
+  object-fit: contain; 
+}
+
+.viewer button.close-viewer {
+  position: absolute; /* Position it in the corner of the modal */
+  top: 20px;
+  right: 20px;
+  background: none;
+  color: white;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 11; 
+}
+
+.viewer.hide {
+  display: none; /* Hide the modal initially */
+}
+
+footer {
+    background-color: #8755d6;
+    color: #ffffff;
+    padding: 7px;
+    font-size: smaller;
+    text-indent: 50px;
+}
+
+/* medium screens */
+@media only screen and (min-width: 550px) and (max-width: 900px) {
+    .gridarea {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    h1 {
+        margin-bottom: 0;
+        font-size: 4rem;
+    }
+
+    h3 {
+        grid-column: 1/3;
+        text-align: center;
+        font-size: 1.8rem;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+}
+
+/* big screens 3 column */
+@media only screen and (min-width: 901px) {
+    .gridarea {
+        display: grid; /* Enables grid layout */
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-rows: min-content;
+        gap: 20px;
+        align-content: center;
+    }
+
+    h1 {
+        margin-bottom: 0;
+        font-size: 4rem;
+    }
+
+    h3 {
+        grid-column: 1/4;
+        text-align: center;
+        font-size: 1.8rem;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .menu-button {
+        display: none;
+    }
+    .header-nav ul {
+        display: flex; /* Always show navigation items */
+        flex-direction: row;
+        text-decoration: none;
+        text-align: center;
+        justify-content: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    section.gridarea {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}

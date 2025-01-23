@@ -19,7 +19,7 @@ header {
     border-bottom: 1px solid #ddd;
 }
 
-.header-grid {
+.gallery {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr; /* Logo, Title, Empty Space */
     grid-template-rows: auto auto; /* Separate rows for title and nav */
