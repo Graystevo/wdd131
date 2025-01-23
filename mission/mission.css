@@ -64,3 +64,18 @@ footer img {
 footer {
     text-align: center;
 }
+
+
+/* STUFF TO DO IN DARK MODE :) */
+.dark {
+    background-color: #333;
+}
+.dark h2 {
+    color: #A0D4ED;
+}
+.dark .content {
+    border: 1px solid #ffffff;  /* white border with 2px width */
+}
+.dark p, .dark h1, .dark em, .dark li, .dark label{ /* This is for the text color swap */
+    color:#ffffff;
+}
