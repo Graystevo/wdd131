@@ -1,38 +1,36 @@
+
 /* if you are using any Google fonts change the font names below to your fonts. 
 Any spaces in your font name should be replaced with a +. 
-Fonts are separated by a | */
-
-@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Fredoka:wght@300..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
-
+Fonts are separated by a & */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
 :root {
   /* change the values below to your colors from your palette */
-  /* https://coolors.co/palette/3d5a80-98c1d9-e0fbfc-ee6c4d-293241 */
-  --primary-color: #293241   ;
-  --secondary-color: #98C1D9 ;
-  --accent1-color: #3D5A80;
-  --accent2-color: #EE6C4D;
+  --primary-color: #386150   ;
+  --secondary-color: #f3dfbf ;
+  --accent1-color: #63d2ff;
+  --accent2-color: black;
 
   /* change the values below to your chosen font(s) */
-  --heading-font: "IM Fell French Canon SC";
-  --paragraph-font: "Libre Baskerville";
+  --heading-font: "Fredoka";
+  --paragraph-font: Lato, Helvetica, sans-serif;
 
   /* these colors below should be chosen from among your palette colors above */
-  --headline-color-on-white: #293241;  /* headlines on a white background */ 
-  --headline-color-on-color: #98C1D9; /* headlines on a colored background */ 
-  --paragraph-color-on-white: #293241; /* paragraph text on a white background */ 
-  --paragraph-color-on-color: #E0FBFC; /* paragraph text on a colored background */ 
-  --paragraph-background-color: #293241  ;
-  --nav-link-color: #E0FBFC;
-  --nav-background-color: #EE6C4D;
-  --nav-hover-link-color: #293241;
-  --nav-hover-background-color: #98C1D9;
+  --headline-color-on-white: #396E94;  /* headlines on a white background */ 
+  --headline-color-on-color: #21424e; /* headlines on a colored background */ 
+  --paragraph-color-on-white: #396E94; /* paragraph text on a white background */ 
+  --paragraph-color-on-color: #21424e; /* paragraph text on a colored background */ 
+  --paragraph-background-color: #040404  ;
+  --nav-link-color: #80A1D4;
+  --nav-background-color: #80A1D4;
+  --nav-hover-link-color: white;
+  --nav-hover-background-color: #396E94;
 }
 
 
 /*  Look around below...but DON'T CHANGE ANYTHING! */
 
 body {
-  max-width: 1200px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 4em;
   font-size: 18px;
@@ -41,6 +39,7 @@ body {
 img {
   display: block;
   margin: 0 auto;
+  max-width: 300px;
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--heading-font);
@@ -63,7 +62,6 @@ header {
 header > h1, header > h2 {
   color: var(--headline-color-on-color);
 }
-
 p {
   font-family: var(--paragraph-font);
   color: var(--paragraph-color-on-white);
@@ -82,7 +80,6 @@ p {
   width: 25%;
   height: 3em;
 }
-
 .primary {
   background-color: var(--primary-color);
 }
@@ -95,12 +92,10 @@ p {
 .accent2{
   background-color: var(--accent2-color);
 }
-
 p.colored {
   background-color: var(--paragraph-background-color);
   color: var(--paragraph-color-on-color);
 }
-
 nav {
   background-color: var(--nav-background-color);
   line-height: 3em;
@@ -110,14 +105,12 @@ nav {
 nav  {
   list-style-type: none;
   display: flex;
-
 }
 nav a {
   padding:1em;
   min-width: 120px;
   text-decoration: none;
   padding: 10px;
-
 }
 nav a:link, nav a:visited {
   color: var(--nav-link-color);
@@ -126,7 +119,6 @@ nav a:hover {
   color: var(--nav-hover-link-color);
   background-color: var(--nav-hover-background-color);
 }
-
 .sitemap {
   display: grid;
   justify-content: center;
@@ -139,9 +131,7 @@ nav a:hover {
     "page2 page2 . . page3 page3";
 }
 .sitemap > div {
-
   text-align: center;
-
 }
 .sm-home {
   grid-area: home;
@@ -158,18 +148,15 @@ nav a:hover {
   background-color: #ccc;
   line-height: 3em;
 }
-
 .top {
   grid-area: top;
   border-left: 1px solid;
 }
-
 .left {
   grid-area: left;
   border-top: 1px solid;
   border-left: 1px solid;
 }
-
 .right {
   grid-area: right;
   border-top: 1px solid;
