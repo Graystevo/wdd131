@@ -1,0 +1,321 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.skiptocontent a {
+    position: absolute;
+    top: -40px;
+}
+
+.skiptocontent a:focus {
+    position: absolute;
+    top: 0px;
+}
+
+body {
+    font-family: Ubuntu, sans-serif;
+    font-size: 14px;
+
+}
+
+.gridarea {
+    display: grid;
+    /* grid-gap: 7px; */
+    grid-template-columns: 1fr;
+    grid-template-areas: "main";
+    place-items: center;
+    /* Centers both horizontally and vertically */
+}
+
+button {
+    background: none;
+    color: #473144;
+    border: none;
+    /* text-decoration: underline; */
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 0;
+    color: #473144;
+}
+
+.header-nav {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0px;
+    gap: 5px;
+    text-align: right;
+    justify-content: right;
+    list-style-type: none;
+    font-size: 1.5rem;
+    color: white;
+    border-top: solid 1px #EFC69B;
+    border-bottom: solid 1px #EFC69B;
+}
+
+.header-nav ul {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0px;
+    gap: 25px;
+    list-style-type: none;
+    margin-right: 50px;
+    margin-bottom: 20px;
+}
+
+nav ul li a {
+    color: #AF1B3F;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #d1cdcd;
+}
+
+.menu-button {
+    cursor: pointer;
+    padding: 4px;
+    margin-bottom: 10px;
+}
+
+.menu-button:hover {
+    background-color: #979797;
+}
+
+.header-nav .hide {
+    display: none;
+}
+
+main .gridarea {
+    text-align: center;
+    margin: 0;
+}
+
+main {
+    background-color: #ddd;
+    display: grid;
+    /* Enables grid layout */
+    grid-template-columns: 1fr 3fr 1fr;
+    width: 100%;
+    height: 100%;
+}
+
+.gridarea {
+    grid-column: 1/4;
+    padding: 25px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #AF1B3F;
+}
+
+p {
+    color: #473144;
+}
+
+.books {
+    grid-column: 1/3;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: 100%;
+    height: 100%;
+}
+
+.details-column {
+    grid-column: 1/2;
+    text-align: right;
+    padding-right: 20px;
+    line-height: 1.75;
+    color: #473144;
+}
+
+.details-column h2 {
+    font-size: 1rem;
+}
+
+.center-column-books {
+    grid-column: 2/3;
+    text-align: left;
+    padding: 20px;
+    padding-top: 0px;
+    border-left: solid 2px #EFC69B;
+
+    display: flex;
+    flex-direction: column;
+    /* Stack the children vertically */
+}
+
+.center-column-books img {
+    justify-self: center;
+    /* Specifically center the image horizontally */
+    align-self: center;
+    /* Specifically center the image vertically */
+    padding-bottom: 15px;
+}
+
+.center-column-books h2 {
+    margin-bottom: 10px;
+}
+
+.search-column {
+    border: solid 2px #EFC69B;
+    width: 100%;
+    height: 100%;
+    grid-column: 3/4;
+}
+
+img {
+    max-width: 250px;
+    max-height: 250px;
+}
+
+/* Modal container */
+.viewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.75);
+    /* Semi-transparent background */
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-rows: 1fr 6fr 1fr;
+    place-items: center;
+    /* Centers the image in the modal */
+    z-index: 10;
+    /* Makes sure it appears above all other elements */
+}
+
+/* Close button */
+.close-viewer {
+    grid-column: 2/3;
+    top: 20px;
+    right: 20px;
+    background: rgb(70, 70, 70);
+    width: 60px;
+    margin-top: 20px;
+    color: white;
+    border: none;
+    font-size: 4rem;
+    cursor: pointer;
+    z-index: 11;
+}
+
+/* Image styles */
+.viewer img {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    max-width: 100%;
+    max-height: 100%;
+    border: none;
+}
+
+
+.viewer.hide {
+    display: none;
+    /* Hide the modal initially */
+}
+
+footer {
+    background-color: #eba1a1;
+    color: #000000;
+    padding: 7px;
+    font-size: smaller;
+    text-indent: 50px;
+}
+
+/* medium screens */
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+    .gridarea {
+        display: grid;
+        /* Enables grid layout */
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-auto-rows: min-content;
+        gap: 20px;
+        align-content: center;
+    }
+
+    h1 {
+        margin-bottom: 0;
+        font-size: 4rem;
+    }
+
+    .menu-button {
+        display: none;
+    }
+
+    .header-nav ul {
+        display: flex;
+        /* Always show navigation items */
+        flex-direction: row;
+        text-decoration: none;
+        text-align: center;
+        justify-content: right;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-right: 50px;
+    }
+
+
+    .center-column-books {
+        grid-column: 2/3;
+        text-align: center;
+        font-size: 1.5rem;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+}
+
+/* big screens 3 column */
+@media only screen and (min-width: 901px) {
+    .gridarea {
+        display: grid;
+        /* Enables grid layout */
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-auto-rows: min-content;
+        align-content: center;
+    }
+
+    h1 {
+        margin-bottom: 0;
+        font-size: 4rem;
+    }
+
+    .center-column-books {
+        grid-column: 2/3;
+        margin-bottom: 30px;
+    }
+
+    .menu-button {
+        display: none;
+    }
+
+    .header-nav ul {
+        display: flex;
+        /* Always show navigation items */
+        flex-direction: row;
+        text-decoration: none;
+        text-align: center;
+        justify-content: right;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-right: 50px;
+    }
+
+    .header-nav li {
+        text-align: right;
+    }
+
+    section.gridarea {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}

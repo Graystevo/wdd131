@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paint Project</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="./scripts/paint.js" defer></script>
+
+</head>
+<body>
+    <header>
+        <div class="header-grid">
+            <div class="logo">
+                <img src="../images/Microsoft_Paint.png" alt="Logo">
+            </div>
+            <div class="header-title">
+                <h1>Welcome to Project 1: Paint</h1>
+                <p>Select a project to explore:</p>
+            </div>
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="./proj1.html">Project 1</a></li>
+                    <li><a href="../subproject2/proj2.html">Project 2</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page content goes here -->
+        <div class="paint-container">
+            <div class="top-bar">
+                <button id="backgroundColorBtn">BG Color: </button>
+                <input type="color" id="backgroundColorPicker">
+                
+                <button id="bucketTool" class="toolButton">
+                    <img src="../images/paint-bucket.png" alt="Bucket Tool" class="icon">
+                </button>
+                <label for="colorPicker">Brush Color: </label>
+                <input type="color" id="colorPicker" value="#000000">
+                <label for="brushSize">Brush Size: </label>
+                <input type="number" id="brushSize" min="1" max="50" value="5">
+                <button id="clearCanvas">
+                    <img src="../images/bin.png" alt="Clear Canvas" class="icon">
+                </button>
+                <button id="downloadCanvas">
+                    <img src="../images/save.png" alt="Download Canvas" class="icon">
+                </button>
+                <div id="popup" class="popup">
+                    <div class="popup-content">
+                      <p>The fill feature is not working yet.</p>
+                      <button id="closePopup">Close</button>
+                    </div>
+                </div>
+                  
+            </div>
+
+            <canvas id="paintCanvas" width="100" height="100"></canvas>
+            
+        </div>  
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Your Website. All rights reserved.</p>
+        <div class="social-links">
+            <li><a href="../site-plan.html">Site plan</a></li>
+            <a href="#"><img src="../images/instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="../images/facebook.png" alt="facebook"></a>
+            <a href="#"><img src="../images/twitter.png" alt="Twitter"></a>
+        </div>
+    </footer>
+</body>
+</html>
