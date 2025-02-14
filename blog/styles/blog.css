@@ -15,7 +15,7 @@
 }
 
 body {
-    font-family:Georgia, 'Times New Roman', Times, serif ;
+    
     font-size: 14px;
 }
 
@@ -40,6 +40,8 @@ h1 {
     text-align: center;
     margin: 1em;
     color: #473144;
+    font-family: Georgia,'Times New Roman', Times, serif ;
+    font-weight: 400;
 }
 
 .header-nav {
@@ -108,12 +110,19 @@ main {
 }
 
 h2 {
-    font-size: 1.4rem;
+    font-size: 1.35rem;
     color: #AF1B3F;
+    font-family: Georgia,'Times New Roman', Times, serif ;
+    font-weight: bold;
 }
 
 p {
     color: #473144;
+}
+
+.center-column-books a {
+    color: #AF1B3F;
+    text-decoration: none;
 }
 
 .books {
