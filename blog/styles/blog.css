@@ -172,6 +172,10 @@ p {
     margin-bottom: 10px;
 }
 
+.center-column-books p {
+    font-size: 16px;
+}
+
 .search-column {
     border: solid 2px #EFC69B;
     width: 100%;

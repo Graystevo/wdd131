@@ -65,14 +65,14 @@ function createArticleHTML(article) {
   return `
     <div class="details-column">
       <h3>${article.date}</h3>
-      <h4>Ages: ${article.ages}</h4>
-      <h4>Genre: ${article.genre}</h4>
-      <h4>Rating: ${article.stars}</h4>
+      <h4>${article.ages}</h4>
+      <h4>${article.genre}</h4>
+      <h4>${article.stars}</h4>
     </div>
     <div class="center-column-books">
       <h2>${article.title}</h2>
       <img src="${article.imgSrc}" alt="${article.imgAlt}">
-      <p>${article.description}</p>
+      <p>${article.description}<a href="#article">Read More..</a></p> 
     </div>
   `;
 }
