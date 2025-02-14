@@ -72,7 +72,7 @@ function createArticleHTML(article) {
     <div class="center-column-books">
       <h2>${article.title}</h2>
       <img src="${article.imgSrc}" alt="${article.imgAlt}">
-      <p>${article.description}<a href="#article">Read More..</a></p> 
+      <p>${article.description}<a href="#article"> Read More..</a></p> 
     </div>
   `;
 }
