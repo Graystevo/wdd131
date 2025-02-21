@@ -41,7 +41,6 @@ const articles = [
 const menuButton = document.querySelector(".menu-button");
 const menu = document.querySelector(".header-nav ul");
 
-// Toggle menu on button click
 menuButton.addEventListener("click", () => {
   menu.classList.toggle("hide");
 });
@@ -58,9 +57,8 @@ function handleResize() {
 handleResize();
 window.addEventListener("resize", handleResize);
 
-const booksContainer = document.querySelector(".books"); // Select the container
+const booksContainer = document.querySelector(".books"); 
 
-// Function to create an article element
 function createArticleHTML(article) {
   return `
     <div class="details-column">
@@ -72,52 +70,14 @@ function createArticleHTML(article) {
     <div class="center-column-books">
       <h2>${article.title}</h2>
       <img src="${article.imgSrc}" alt="${article.imgAlt}">
-      <p>${article.description}<a href="#article"> Read More..</a></p> 
+      <p>${article.description}<a href="#article"> Read More..</a></p>
     </div>
   `;
 }
 
-// Loop through the articles array and render each article
 articles.forEach((article) => {
-  const articleElement = document.createElement("div"); // Create a wrapper div for the article
-  articleElement.classList.add("article"); // Add a class if needed
-  articleElement.innerHTML = createArticleHTML(article); // Set the inner HTML
-  booksContainer.appendChild(articleElement); // Append to the container
+  const articleElement = document.createElement("div");
+  articleElement.classList.add("article");
+  articleElement.innerHTML = createArticleHTML(article);
+  booksContainer.appendChild(articleElement);
 });
-
-// // Function to create the viewer modal
-// function viewerTemplate(pic, alt) {
-//     return `<div class="viewer">
-//       <button class="close-viewer">X</button>
-//       <img src="${pic}" alt="${alt}">
-//     </div>`;
-//   }
-
-//   // Function to handle clicks on gallery images
-//   function viewHandler(event) {
-//     const clickedElement = event.target;
-
-//     if (clickedElement.tagName === "IMG") {
-//       const srcParts = clickedElement.src.split("-");
-//       const fullSrc = `${srcParts[0]}-full.jpeg`;
-
-//       const modalHTML = viewerTemplate(fullSrc, clickedElement.alt);
-
-//       document.body.insertAdjacentHTML("afterbegin", modalHTML);
-
-//       const closeButton = document.querySelector(".close-viewer");
-//       closeButton.addEventListener("click", closeViewer);
-//     }
-//   }
-
-//   // Function to close the modal
-//   function closeViewer() {
-//     const viewer = document.querySelector(".viewer");
-//     if (viewer) {
-//       viewer.remove();
-//     }
-//   }
-
-//   // Add event listener to the gallery
-//   const gallery = document.querySelector(".gridarea"); // Adjust selector to match your HTML
-//   gallery.addEventListener("click", viewHandler);
