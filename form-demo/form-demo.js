@@ -14,27 +14,36 @@ function validateForm(event) {
   }
   
   function togglePaymentDetails(e) {
-    // Get the form from the event target (the paymentMethod select)
-    const theForm = e.target.form;
-    // Updated container IDs based on the new HTML structure.
-    const creditCardContainer = document.getElementById('creditCardNumberContainer');
-    const paypalContainer = document.getElementById('paypalUsernameContainer');
+    // Get a reference to the form to easily access its named elements.
+    const theForm = document.querySelector("#checkoutForm");
   
-    // Hide both containers and disable required attribute on their inputs.
-    creditCardContainer.classList.add('hide');
-    paypalContainer.classList.add('hide');
-    document.getElementById('creditCardNumber').required = false;
-    document.getElementById('paypalUsername').required = false;
+    // Get the containers for the credit card and PayPal details.
+    const creditCardContainer = document.getElementById("creditCardNumberContainer");
+    const paypalContainer = document.getElementById("paypalUsernameContainer");
   
-    // Show the appropriate container and re-enable the required attribute.
-    if (e.target.value === 'creditCard') {
-      creditCardContainer.classList.remove('hide');
-      document.getElementById('creditCardNumber').required = true;
-    } else if (e.target.value === 'paypal') {
-      paypalContainer.classList.remove('hide');
-      document.getElementById('paypalUsername').required = true;
+    // Hide both payment detail containers.
+    creditCardContainer.classList.add("hide");
+    paypalContainer.classList.add("hide");
+  
+    // Remove the required attribute from both hidden payment fields.
+    theForm.creditCardNumber.required = false;
+    theForm.paypalUsername.required = false;
+  
+    // Show the appropriate container and enable the required attribute based on the selected payment method.
+    if (theForm.paymentMethod.value === "creditCard") {
+      creditCardContainer.classList.remove("hide");
+      theForm.creditCardNumber.required = true;
+    } else if (theForm.paymentMethod.value === "paypal") {
+      paypalContainer.classList.remove("hide");
+      theForm.paypalUsername.required = true;
     }
   }
+  
+  // Attach a change event handler to the paymentMethod input to call togglePaymentDetails on change.
+  document
+    .querySelector("#paymentMethod")
+    .addEventListener("change", togglePaymentDetails);
+  
   
   // Helper function to display errors.
   function showErrors(errors) {
