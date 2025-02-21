@@ -1,7 +1,7 @@
-/* form-demo.css */
 * {
     box-sizing: border-box;
   }
+  
   body {
     font-family: Arial, sans-serif;
     margin: 20px;
@@ -10,12 +10,18 @@
   main {
     max-width: 600px;
     margin: 0 auto;
+    background: #fff;               /* Added a white background for contrast */
+    padding: 20px;                  /* Added padding for spacing */
+    border-radius: 8px;             /* Rounded corners for a modern look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   }
   
   .errors > p {
     border: 1px solid red;
     padding: 0.5em;
+    color: red;
   }
+  
   /* Style the select arrow for Safari */
   select::-webkit-inner-spin-button,
   select::-webkit-outer-spin-button {
@@ -28,10 +34,42 @@
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  label {
+    display: block;                /* Makes sure each label takes its own line */
+    margin: 10px 0 5px;            /* Spacing above and below labels */
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
   }
   
   .hide {
-    display: none; /* Initially hide the credit card input and label */
+    display: none; /* Already provided; hides the payment fields by default */
   }
-
   
