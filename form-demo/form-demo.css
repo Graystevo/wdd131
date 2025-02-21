@@ -1,3 +1,4 @@
+/* Global box-sizing to include padding and borders in element's total width/height */
 * {
     box-sizing: border-box;
   }
@@ -5,49 +6,49 @@
   body {
     font-family: Arial, sans-serif;
     margin: 20px;
+    background-color: #f4f4f4; /* Light background for contrast */
   }
   
   main {
     max-width: 600px;
     margin: 0 auto;
-    background: #fff;                    /* Added white background */
-    padding: 20px;                       /* Added padding */
-    border-radius: 8px;                  /* Rounded corners */
+    background: #fff;                    /* White background for the form container */
+    padding: 20px;                       /* Spacious padding around the content */
+    border-radius: 8px;                  /* Rounded corners for a modern look */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   }
   
   label {
-    display: block;                      /* Ensures labels are on their own line */
-    margin: 10px 0 5px;                  /* Spacing above and below labels */
+    display: block;
+    margin-bottom: 8px; /* Adopted from your snippet for consistent spacing */
   }
   
   input,
-  textarea,
-  select {
+  select,
+  textarea {
     width: 100%;
     padding: 10px;
-    font-size: 16px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
+    margin-bottom: 10px; /* Using your snippet's margin for a tighter layout */
+    border: 1px solid #ccc; /* Consistent border for visual clarity */
     border-radius: 4px;
+    font-size: 16px; /* Ensures text is legible */
   }
   
   textarea {
-    resize: vertical;                    /* Allow vertical resize */
+    resize: vertical; /* Allow vertical resizing without breaking the layout */
   }
   
   button {
-    background-color: #007bff;
-    color: #fff;
-    padding: 12px;
+    background-color: #4caf50; /* Using your provided green for buttons */
+    color: white;
+    padding: 10px 15px; /* Slightly different padding for a distinct button feel */
     border: none;
     border-radius: 4px;
-    font-size: 16px;
     cursor: pointer;
   }
   
   button:hover {
-    background-color: #0056b3;
+    background-color: #43a047; /* A darker green on hover for visual feedback */
   }
   
   .errors > p {
