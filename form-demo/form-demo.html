@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout Form</title>
+    <link rel="stylesheet" href="form-demo.css" />
+    <script src="form-demo.js" defer></script>
+  </head>
+  <body>
+    <header><h1>Checkout</h1></header>
+    <main>
+      <section class="errors"></section>
+      <form id="checkoutForm" action="completed.html">
+        <!-- Name -->
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" name="fullName" required />
+
+        <!-- Email -->
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <!-- Shipping Address -->
+        <label for="shippingAddress">Shipping Address</label>
+        <input type="text" id="shippingAddress" name="shippingAddress" required />
+
+        <!-- Phone Number -->
+        <label for="phoneNumber">Phone Number</label>
+        <input type="tel" id="phoneNumber" name="phoneNumber" required />
+
+        <!-- Payment Method -->
+        <label for="paymentMethod">Payment Method</label>
+        <select id="paymentMethod" name="paymentMethod" required>
+          <option value="">Select Payment Method</option>
+          <option value="creditCard">Credit Card</option>
+          <option value="paypal">PayPal</option>
+        </select>
+
+        <!-- Credit Card Number (Initially hidden) -->
+        <div id="creditCardNumber" class="hide">
+          <label for="creditCard">Credit Card Number</label>
+          <input type="text" id="creditCard" name="creditCard" pattern="[0-9]{16}" required />
+        </div>
+
+        <!-- PayPal Username (Initially hidden) -->
+        <div id="paypalUsername" class="hide">
+          <label for="paypal">PayPal Username</label>
+          <input type="text" id="paypal" name="paypal" required />
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+      </form>
+    </main>
+  </body>
+</html>
