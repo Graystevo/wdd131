@@ -1,5 +1,5 @@
 function participantTemplate(count) {
-    return `
+  return `
         <section class="participant${count}">
             <p>Participant ${count}</p>
             <div class="item">
@@ -40,72 +40,67 @@ function participantTemplate(count) {
     `;
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    let participantCount = 1;
+document.addEventListener("DOMContentLoaded", () => {
+  let participantCount = 1;
 
-    const addButton = document.getElementById('add');
-    const participantsFieldset = document.querySelector('.participants');
-    
-    addButton.addEventListener('click', () => {
-        participantCount++;
-        const newParticipantHTML = participantTemplate(participantCount);
-        
-        addButton.insertAdjacentHTML('beforebegin', newParticipantHTML);
-    });
+  const addButton = document.getElementById("add");
+  const participantsFieldset = document.querySelector(".participants");
+
+  addButton.addEventListener("click", () => {
+    participantCount++;
+    const newParticipantHTML = participantTemplate(participantCount);
+
+    addButton.insertAdjacentHTML("beforebegin", newParticipantHTML);
+  });
 });
 
 // Function to calculate the total fees
 function totalFees() {
-    let feeElements = document.querySelectorAll("[id^=fee]"); // Select all fee fields
-    feeElements = [...feeElements];
-    
-    // Calculate the sum of all fees using reduce()
-    let total = feeElements.reduce((sum, feeElement) => {
-        return sum + parseFloat(feeElement.value) || 0;
-    }, 0);
-    
-    return total;
+  let feeElements = document.querySelectorAll("[id^=fee]");
+  feeElements = [...feeElements];
+
+  let total = feeElements.reduce((sum, feeElement) => {
+    return sum + parseFloat(feeElement.value) || 0;
+  }, 0);
+
+  return total;
 }
 
-// Function to generate the success message template
 function successTemplate(info) {
-    return `
+  return `
         <p>Thank you ${info.adultName} for registering. You have registered ${info.participantCount} participants and owe $${info.totalFees} in Fees.</p>
     `;
 }
 
 // Register form submission event handler
-document.addEventListener('DOMContentLoaded', () => {
-    const form = document.querySelector('form');
-    const summarySection = document.getElementById('summary');
-    const formContainer = document.querySelector('.testbox');
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector("form");
+  const summarySection = document.getElementById("summary");
+  const formContainer = document.querySelector(".testbox");
 
-    form.addEventListener('submit', (event) => {
-        event.preventDefault(); // Prevent page reload
-        
-        // Get the adult's name
-        const adultName = document.getElementById('adult_name').value;
+  form.addEventListener("submit", (event) => {
+    event.preventDefault(); // Prevent page reload
 
-        // Count the number of participants
-        const participantCount = document.querySelectorAll('.participant1').length;
+    // Get the adult's name
+    const adultName = document.getElementById("adult_name").value;
 
-        // Calculate the total fees
-        const totalFeesAmount = totalFees();
+    // Count the number of participants
+    const participantCount = document.querySelectorAll(".participant1").length;
 
-        // Generate success message
-        const info = {
-            adultName: adultName,
-            participantCount: participantCount,
-            totalFees: totalFeesAmount.toFixed(2) // Format to 2 decimal places
-        };
-        const successMessage = successTemplate(info);
+    // Calculate the total fees
+    const totalFeesAmount = totalFees();
 
-        // Hide the form and show the summary
-        formContainer.style.display = 'none'; // Hide the form
-        summarySection.style.display = 'block'; // Show the summary
-        summarySection.innerHTML = successMessage; // Insert the success message
-    });
+    // Generate success message
+    const info = {
+      adultName: adultName,
+      participantCount: participantCount,
+      totalFees: totalFeesAmount.toFixed(2), // Format to 2 decimal places
+    };
+    const successMessage = successTemplate(info);
+
+    // Hide the form and show the summary
+    formContainer.style.display = "none"; // Hide the form
+    summarySection.style.display = "block"; // Show the summary
+    summarySection.innerHTML = successMessage; // Insert the success message
+  });
 });
-
-
-
