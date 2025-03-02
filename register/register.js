@@ -76,6 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector("form");
   const summarySection = document.getElementById("summary");
   const formContainer = document.querySelector("form");
+  let feeElements = document.querySelectorAll("[id^=fee]");
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -83,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const adultName = document.getElementById("adult_name").value;
 
     // Count the number of participants still fails. dunno why
-    const participantCount = document.querySelectorAll(".participant*").length;
+    const participantCount = document.querySelectorAll(feeElements).count;
 
     const totalFeesAmount = totalFees();
 
