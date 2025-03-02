@@ -1,4 +1,3 @@
-// register.js
 function participantTemplate(count) {
     return `
         <section class="participant${count}">
@@ -41,20 +40,16 @@ function participantTemplate(count) {
     `;
 }
 
-// register.js
 document.addEventListener('DOMContentLoaded', () => {
     let participantCount = 1;
 
-    // Get the Add Participant button and the container for participants
     const addButton = document.getElementById('add');
     const participantsFieldset = document.querySelector('.participants');
     
-    // Event listener for adding a new participant
     addButton.addEventListener('click', () => {
-        participantCount++; // Increment participant count
+        participantCount++;
         const newParticipantHTML = participantTemplate(participantCount);
         
-        // Insert new participant HTML before the "Add Participant" button
         addButton.insertAdjacentHTML('beforebegin', newParticipantHTML);
     });
 });
@@ -62,11 +57,11 @@ document.addEventListener('DOMContentLoaded', () => {
 // Function to calculate the total fees
 function totalFees() {
     let feeElements = document.querySelectorAll("[id^=fee]"); // Select all fee fields
-    feeElements = [...feeElements]; // Convert NodeList to an Array
+    feeElements = [...feeElements];
     
     // Calculate the sum of all fees using reduce()
     let total = feeElements.reduce((sum, feeElement) => {
-        return sum + parseFloat(feeElement.value) || 0; // Add each fee value, or 0 if the field is empty
+        return sum + parseFloat(feeElement.value) || 0;
     }, 0);
     
     return total;
