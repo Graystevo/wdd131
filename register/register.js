@@ -71,7 +71,6 @@ function successTemplate(info) {
     `;
 }
 
-// Register form submission event handler
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector("form");
   const summarySection = document.getElementById("summary");
@@ -82,7 +81,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const adultName = document.getElementById("adult_name").value;
 
-    // Count the number of participants still fails. dunno why
     const participantCount = document.querySelectorAll(".participant").length;
 
     const totalFeesAmount = totalFees();

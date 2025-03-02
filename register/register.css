@@ -178,12 +178,6 @@ button:hover {
     background: #00b33c;
 }
 
-/* register.css */
-/* .hide {
-    display: none;
-} */
-
-
 @media (max-width: 568px) {
     .columns div {
         width: 100%;
