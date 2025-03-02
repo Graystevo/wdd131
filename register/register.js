@@ -54,7 +54,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Function to calculate the total fees
 function totalFees() {
   let feeElements = document.querySelectorAll("[id^=fee]");
   feeElements = [...feeElements];
@@ -76,31 +75,27 @@ function successTemplate(info) {
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector("form");
   const summarySection = document.getElementById("summary");
-  const formContainer = document.querySelector(".testbox");
+  const formContainer = document.querySelector("form");
 
   form.addEventListener("submit", (event) => {
-    event.preventDefault(); // Prevent page reload
+    event.preventDefault();
 
-    // Get the adult's name
     const adultName = document.getElementById("adult_name").value;
 
-    // Count the number of participants
-    const participantCount = document.querySelectorAll(".participant1").length;
+    // Count the number of participants still fails. dunno why
+    const participantCount = document.querySelectorAll(".participant*").length;
 
-    // Calculate the total fees
     const totalFeesAmount = totalFees();
 
-    // Generate success message
     const info = {
       adultName: adultName,
       participantCount: participantCount,
-      totalFees: totalFeesAmount.toFixed(2), // Format to 2 decimal places
+      totalFees: totalFeesAmount.toFixed(2),
     };
     const successMessage = successTemplate(info);
 
-    // Hide the form and show the summary
-    formContainer.style.display = "none"; // Hide the form
-    summarySection.style.display = "block"; // Show the summary
-    summarySection.innerHTML = successMessage; // Insert the success message
+    formContainer.style.display = "none";
+    summarySection.style.display = "block";
+    summarySection.innerHTML = successMessage;
   });
 });
