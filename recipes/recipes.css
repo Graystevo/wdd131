@@ -1,12 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Macondo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Schoolbell&display=swap');
+
+@font-face {
+  font-family: 'Schoolbell';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/schoolbell/v18/92zQtBZWOrcgoe-fgnJIZxUa6w.woff2) format('woff2');
+}
 
 :root {
-	--primary-color: #1b98e0;
+	--primary-color: #0272b3;
 	--secondary-color: #59c3c3;
 	--text-dark: #333;
 	--text-light: #ebebeb;
 	--primary-font: Arial, Helvetica, sans-serif;
-	--secondary-font: 'Macondo';
+	--secondary-font: 'Schoolbell', cursive;
 }
 
 * {
@@ -70,7 +77,6 @@ h1 > img {
 	border: 1px solid;
 	padding-left: 5px;
 	border-radius: 5px 0 0 5px;
-	-webkit-appearance: none;
 	width: 100%;
 }
 
@@ -102,7 +108,7 @@ h1 > img {
 }
 
 .attribution {
-	font-size: 0.6em;
+	font-size: 0.8em;
 }
 
 footer {
@@ -116,7 +122,7 @@ footer {
 	width: 44px;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 720px) {
 	body {
 		max-width: 960px;
 		margin: 0 auto;
@@ -135,3 +141,4 @@ footer {
 		flex-direction: row;
 	}
 }
+

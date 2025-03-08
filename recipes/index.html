@@ -2,33 +2,41 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipe Book</title>
-    <meta name="description" content="Recipe website built for WDD 131" />
+    <link rel="icon" href="./images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="/recipes/recipes.css" as="style">
+    <link rel="stylesheet" href="./recipes.css">
     <meta name="description" content="Recipe Book is a website about Recipes.">
     <meta name="author" content="Grayden">
-    <link rel="stylesheet" href="recipes.css" />
+    <meta property="og:title" content="Recipe Book">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Recipe Book is a website about Recipes.">
+    <meta property="og:image" content="./images/black-beans-and-rice.jpg">
+    <meta property="og:url" content="https://graystevo.github.io/wdd131/recipes/index.html">
+    <meta name="twitter:card" content="./images/chocolate-chip-cookies.jpg">
     <script src="main.js" type="module"></script>
 </head>
 
 <body>
     <header>
         <h1>
-            <img src="images/recipe-book.png" alt="icon of a cookbook" />RecipeBook
+            <img src="images/recipe-book.png" alt="icon of a cookbook">RecipeBook
         </h1>
     </header>
     <main>
         <form class="search" role="search">
             <input type="search" name="q" id="site-search" aria-label="Search through site content"
-                placeholder="Find a recipe" /><button id="searchButton">
-                <img src="images/search.svg" alt="search icon" />
+                placeholder="Find a recipe"><button id="searchButton">
+                <img src="images/search.svg" alt="search icon">
             </button>
         </form>
-        <hr />
+        <hr>
         <section class="recipe-list">
             <figure class="recipe">
-                <img src="images/apple-crisp.jpg" alt="" />
+                <img src="images/apple-crisp.jpg" width="700" alt="apple crisp">
                 <figcaption>
                     <ul class="recipe__tags">
                         <li>Dessert</li>
@@ -57,9 +65,9 @@
             created by Freepik - Flaticon</a>
         <div class="social">
             <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
-            <a href="#"><img src="images/instagram_icon.svg" alt="instagram icon" /></a>
-            <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon" /></a>
-            <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon" /></a>
+            <a href="#"><img src="images/instagram_icon.svg" alt="instagram icon"></a>
+            <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon"></a>
+            <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon"></a>
         </div>
     </footer>
 </body>
