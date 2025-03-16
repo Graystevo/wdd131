@@ -63,7 +63,15 @@ function init() {
 
 document.addEventListener("DOMContentLoaded", init);
 
-document.querySelector("#search-button").addEventListener("click", searchHandler);
+document.querySelector("#searchButton").addEventListener("click", searchHandler);
+
+function searchHandler(e) {
+  e.preventDefault();
+
+  const query = document.querySelector("#site-search").value.toLowerCase();
+  const filteredRecipes = filterRecipes(query);
+  renderRecipes(filteredRecipes);
+}
 
 function filterRecipes(query) {
   return recipes
@@ -75,12 +83,4 @@ function filterRecipes(query) {
       );
     })
     .sort((a, b) => a.name.localeCompare(b.name));
-}
-
-function searchHandler(e) {
-  e.preventDefault();
-
-  const query = document.querySelector("#search-input").value.toLowerCase();
-  const filteredRecipes = filterRecipes(query);
-  renderRecipes(filteredRecipes);
 }
