@@ -26,7 +26,7 @@ function ratingTemplate(rating) {
       html += '<span aria-hidden="true" class="icon-star-empty">☆</span>';
     }
   }
-
+  
   html += `</span>`;
   return html;
 }
@@ -51,9 +51,7 @@ function recipeTemplate(recipe) {
 
 function renderRecipes(recipeList) {
   const recipeContainer = document.querySelector(".recipe-list");
-  recipeContainer.innerHTML = recipeList
-    .map((recipe) => recipeTemplate(recipe))
-    .join("");
+  recipeContainer.innerHTML = recipeList.map((recipe) => recipeTemplate(recipe)).join("");
 }
 
 function init() {
@@ -62,6 +60,8 @@ function init() {
 }
 
 document.addEventListener("DOMContentLoaded", init);
+
+
 
 document.querySelector("#searchButton").addEventListener("click", searchHandler);
 
