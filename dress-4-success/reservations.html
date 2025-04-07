@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>~ Scoots ~ Home</title>
+    <title>~ Scoots ~ Reservations</title>
     <link rel="icon" href="./images/favicon.ico">
     <link rel="preload" href="styles/normalize.css" as="style">
     <link rel="preload" href="styles/base.css" as="style">
@@ -13,16 +13,15 @@
     <link rel="stylesheet" href="./styles/base.css">
     <link rel="stylesheet" href="./styles/medium.css">
     <link rel="stylesheet" href="./styles/larger.css">
-    <meta name="description" content="Scoots is a motor scooter, ATV and jeep rental service in Cozumel. Explore the island with ease and fun!">
+    <meta name="description"
+        content="Scoots is a motor scooter, ATV and jeep rental service in Cozumel. Explore the island with ease and fun!">
     <meta name="author" content="Scoots">
-    <meta property="og:title" content="~ Scoots ~ Home">
+    <meta property="og:title" content="~ Scoots ~ Reservations">
     <meta property="og:type" content="website">
     <meta property="og:image" content="./images/cozumel-island-small.jpg">
     <meta property="og:url" content="https://scoots.com/index.html">
     <script src="./scripts/menu.js" defer></script>
-    <script src="./scripts/windchill.js" defer></script>
     <script src="./scripts/getdates.js"></script>
-    <script src="./scripts/weather.js" defer></script>
 </head>
 
 <body>
@@ -39,62 +38,78 @@
                 </div>
                 <button id="menu" aria-label="menu button"></button>
                 <ul class="navigation">
-                    <li><a href="./index.html" title="Home" class="active">Home</a></li>
+                    <li><a href="./index.html" title="Home">Home</a></li>
                     <li><a href="./rentals.html" title="Rentals">Rentals</a></li>
-                    <li><a href="./reservations.html" title="Reservations">Reservations</a></li>
+                    <li><a href="./reservations.html" title="Reservations" class="active">Reservations</a></li>
                     <li><a href="./contact.html" title="Contact">Contact Us!</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main>
-        <section class="content">
-            <div id="temp-banner" class="banner" style="display:flex;">
-                <p>Today's max temp is: <span id="max-temp">88.81</span>&deg;F</p>
-                <button id="close-banner" aria-label="Close banner">&times;</button>
-            </div>
-            <div class="hero">
-                <picture>
-                    <source srcset="./images/jeep-cozomel-cropped-smaller.jpg" media="(max-width:540px)">
-                    <source srcset="./images/jeep-cozomel-cropped.webp" media="(max-width:1000px)">
-                    <img src="./images/jeep-cozomel-cropped.webp" alt="Scenic view of Cozumel coastline">
-                </picture>
-                <div class="herolabel">
-                    <a href="./reservations.html" class="cta-button">Explore Cozumel with Scoots!</a>
-                </div>
-            </div>
-        </section>
-        <!-- Spotlight Section -->
-        <section class="spotlight-card">
-            <div id="spotlight-card1">
-                <h3>Scooter Rentals</h3>
-                <p>Discover our range of motor scooters, perfect for zipping around Cozumel's streets and enjoying the island breeze.</p>
-                <img src="./images/honda-metro-scooter.webp" alt="Picture of a scooter" loading="lazy">
-            </div>
-            <div id="spotlight-card2">
-                <h3>ATV Rentals</h3>
-                <p>Take on the off-road trails with our side-by-side ATVs, ideal for adventurous rides across rugged terrain.</p>
-                <img src="./images/honda-pioneer-atv.webp" alt="Picture of 4 by 4 atv" loading="lazy">
-            </div>
-            <div id="spotlight-card3">
-                <h3>Jeep Rentals</h3>
-                <p>Experience comfort and style on our rugged jeeps, tailored for both city cruising and island exploration.</p>
-                <img src="./images/jeep-wrangler-4door.webp" alt="Picture of 4 door Jeep" loading="lazy">
-            </div>
-        </section>
-        <!-- Information Section -->
+    <main class="rental">
+        <h1>Rental Application</h1>
+        <div class="form-container">
+            <form method="get" action="thankyou.html">
+                <label>
+                    Name:
+                    <input type="text" id="name" name="name" required>
+                </label>
+                <label>
+                    Email:
+                    <input type="email" id="email" name="email" required placeholder="example@domain.com">
+                </label>
+                <label>
+                    Phone Number:
+                    <input type="tel" id="phone" name="phone" required>
+                </label>
+                <label>
+                    Rental Date:
+                    <input type="date" id="rentalDate" name="rentalDate" required>
+                </label>
+                <label>
+                    Rental Period:
+                    <select id="rentalPeriod" name="rentalPeriod" required>
+                        <option value="">Select Rental Period</option>
+                        <option value="half_day">Half Day</option>
+                        <option value="full_day">Full Day</option>
+                        <option value="multi_day">Multi-Day</option>
+                    </select>
+                </label>
+                <label>
+                    Rental Type:
+                    <select id="rentalType" name="rentalType" required>
+                        <option value="">Select Rental Type</option>
+                        <option value="scooter">Scooter</option>
+                        <option value="atv">ATV</option>
+                        <option value="jeep">Jeep</option>
+                    </select>
+                </label>
+                <label>
+                    Quantity:
+                    <input type="number" id="quantity" name="quantity" min="1" required>
+                </label>
+                <label>
+                    Home State/Country:
+                    <input type="text" id="location" name="location" required>
+                </label>
+                <label>
+                    Cruise Line (if applicable):
+                    <input type="text" id="cruiseLine" name="cruiseLine">
+                </label>
+                <label class="full-width">
+                    Special Accommodations/Comments:
+                    <textarea id="comments" name="comments" rows="4"
+                        placeholder="E.g., drop-off request location"></textarea>
+                </label>
+                <!-- Hidden field set by JavaScript on page load -->
+                <input type="hidden" id="formLoadTimestamp" name="formLoadTimestamp" value="">
+                <button type="submit">Submit Application</button>
+            </form>
+
+        </div>
         <section class="information-card">
-            <h3>Current Weather</h3>
-            <div id="current-weather">
-                <img id="weather-icon" src="https://openweathermap.org/img/w/01d.png" alt="Weather icon">
-                <p><span id="current-temp">50</span>&deg;F</p>
-                <p><span id="weather-type">Partly Cloudy</span></p>
-                <p><span id="humidity">Humidity: 0%</span></p>
-                <p><span id="wind-speed">Wind Speed: 5 MPH</span></p>
-                <p><span id="wind-chill">N/A</span></p>
-            </div>
-            <div id="forecast"><h3>Tomorrow's Forecast</h3></div>
+
             <div id="rental-agreement">
                 <h3>Rental Details</h3>
                 <ul>

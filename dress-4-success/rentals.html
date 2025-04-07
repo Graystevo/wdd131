@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>~ Scoots ~ Rentals</title>
+    <link rel="icon" href="./images/favicon.ico">
+    <link rel="preload" href="styles/normalize.css" as="style">
+    <link rel="preload" href="styles/base.css" as="style">
+    <link rel="preload" href="styles/larger.css" as="style">
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/base.css">
+    <link rel="stylesheet" href="./styles/medium.css">
+    <link rel="stylesheet" href="./styles/larger.css">
+    <meta name="description"
+        content="Scoots is a motor scooter, ATV and jeep rental service in Cozumel. Explore the island with ease and fun!">
+    <meta name="author" content="Scoots">
+    <meta property="og:title" content="~ Scoots ~ Rentals">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="./images/cozumel-island-small.jpg">
+    <meta property="og:url" content="https://scoots.com/index.html">
+    <script src="./scripts/menu.js" defer></script>
+    <script src="./scripts/getdates.js"></script>
+    <script src="./scripts/rentals.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-grid">
+            <div class="logo">
+                <img src="./images/logo-scoots-large.webp" alt="Scoots Logo">
+                <h1>~ Scoots ~</h1>
+            </div>
+            <nav class="header-nav">
+                <div id="mode">
+                    <p>🌑</p>
+                </div>
+                <button id="menu" aria-label="menu button"></button>
+                <ul class="navigation">
+                    <li><a href="./index.html" title="Home">Home</a></li>
+                    <li><a href="./rentals.html" title="Rentals" class="active">Rentals</a></li>
+                    <li><a href="./reservations.html" title="Reservations">Reservations</a></li>
+                    <li><a href="./contact.html" title="Contact">Contact Us!</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="rental-page">
+        <h2>Available Rental Options & Prices</h2>
+        <!-- Data table will be inserted here by the script -->
+        <table>
+            <thead>
+                <tr>
+                    <th style="padding: 8px;">Rental Type</th>
+                    <th style="padding: 8px;">Max Persons</th>
+                    <th style="padding: 8px;">Half Day (Reservation)</th>
+                    <th style="padding: 8px;">Full Day (Reservation)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="padding: 8px;">Honda Metropolitan Scooter</td>
+                    <td style="padding: 8px;">1</td>
+                    <td style="padding: 8px;">$20</td>
+                    <td style="padding: 8px;">$30</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px;">Honda Dio Scooter</td>
+                    <td style="padding: 8px;">2</td>
+                    <td style="padding: 8px;">$30</td>
+                    <td style="padding: 8px;">$40</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px;">Honda PCX150 Scooter</td>
+                    <td style="padding: 8px;">2</td>
+                    <td style="padding: 8px;">$40</td>
+                    <td style="padding: 8px;">$50</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px;">Honda Pioneer ATV</td>
+                    <td style="padding: 8px;">4</td>
+                    <td style="padding: 8px;">$50</td>
+                    <td style="padding: 8px;">$70</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px;">Jeep Wrangler - 4 door with A/C</td>
+                    <td style="padding: 8px;">5</td>
+                    <td style="padding: 8px;">$70</td>
+                    <td style="padding: 8px;">$100</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px;">Jeep Wrangler - 2 door</td>
+                    <td style="padding: 8px;">4</td>
+                    <td style="padding: 8px;">$60</td>
+                    <td style="padding: 8px;">$85</td>
+                </tr>
+            </tbody>
+        </table>
+        <section class="information-card">
+            <div id="rental-agreement">
+                <h3>Rental Details</h3>
+                <ul>
+                    <li>A $50 security deposit is required to confirm reservations.</li>
+                    <li>A valid driver’s license is required in hand at the time of rental.</li>
+                    <li>No one under the age of 12 years is allowed to ride on the scooters.</li>
+                    <li>Fuel charge is not included.</li>
+                    <li>Unlimited mileage.</li>
+                    <li>Liability insurance is included.</li>
+                    <li>Damage insurance is available for purchase.</li>
+                    <li>Free delivery to Cozumel hotels or Airbnbs for 2+ day rentals.</li>
+                    <li>Payment via Google Pay, Apple Pay, cash, credit card, debit card, or Venmo.</li>
+                    <li>Rentals may be returned to either physical location.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <p>Phone: 123-123-1234</p>
+            <p>Email: support@scoots.com</p>
+            <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
+        </div>
+        <a href="./attributions.html">References and Sources</a>
+        <p>&copy; Scoots - Your Cozumel Rental Experts</p>
+        <p> <span id="lastModified">Last Modified: for script: 1/15/25</span></p>
+    </footer>
+</body>
+
+</html>

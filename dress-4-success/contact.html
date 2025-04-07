@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>~ Scoots ~ Rentals</title>
+    <link rel="icon" href="./images/favicon.ico">
+    <link rel="preload" href="styles/normalize.css" as="style">
+    <link rel="preload" href="styles/base.css" as="style">
+    <link rel="preload" href="styles/larger.css" as="style">
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/base.css">
+    <link rel="stylesheet" href="./styles/medium.css">
+    <link rel="stylesheet" href="./styles/larger.css">
+    <meta name="description"
+        content="Scoots is a motor scooter, ATV and jeep rental service in Cozumel. Explore the island with ease and fun!">
+    <meta name="author" content="Scoots">
+    <meta property="og:title" content="~ Scoots ~ Rentals">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="./images/cozumel-island-small.jpg">
+    <meta property="og:url" content="https://scoots.com/index.html">
+    <script src="./scripts/menu.js" defer></script>
+    <script src="./scripts/getdates.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-grid">
+            <div class="logo">
+                <img src="./images/logo-scoots-large.webp" alt="Scoots Logo">
+                <h1>~ Scoots ~</h1>
+            </div>
+            <nav class="header-nav">
+                <div id="mode">
+                    <p>🌑</p>
+                </div>
+                <button id="menu" aria-label="menu button"></button>
+                <ul class="navigation">
+                    <li><a href="./index.html" title="Home">Home</a></li>
+                    <li><a href="./rentals.html" title="Rentals" class="active">Rentals</a></li>
+                    <li><a href="./reservations.html" title="Reservations">Reservations</a></li>
+                    <li><a href="./contact.html" title="Contact">Contact Us!</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact-info">
+            <h2>Contact Information</h2>
+            <p><strong>Phone:</strong> 123-123-1234</p>
+            <p><strong>Email:</strong> <a href="mailto:support@scoots.com">support@scoots.com</a></p>
+            <p><strong>Location 1:</strong> El Centro de Cozumel, near the Playa del Carmen-Cozumel Ferry dock</p>
+            <p><strong>Location 2:</strong> Near Terminal Puerta Maya, southern Cozumel</p>
+        </section>
+
+
+        <!-- Basic Contact Form -->
+        <section class="contact-form">
+            <h2>Contact Us</h2>
+            <form method="get" action="thankyou.html">
+                <label>
+                    Name:
+                    <input type="text" name="name" required>
+                </label>
+                <label>
+                    Email:
+                    <input type="email" name="email" required placeholder="example@domain.com">
+                </label>
+                <label>
+                    Comment:
+                    <textarea name="comment" rows="2" required placeholder="Your message here..."></textarea>
+                </label>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+        <section class="map-container">
+            <h2>Our Locations</h2>
+            <div class="map-grid">
+                <div class="map">
+                    <h3>El Centro de Cozumel</h3>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.213188426238!2d-86.958958!3d20.510558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4e419c9fef09b1%3A0x7b48df293e99f3!2sCozumel%2C%20Quintana%20Roo%2C%20Mexico!5e0!3m2!1sen!2sus!4v1598637925843!5m2!1sen!2sus"
+                        width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="map">
+                    <h3>Terminal Puerta Maya</h3>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.578370048034!2d-86.97353031559259!3d20.49034838602261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4e4209b1e61a73%3A0x2b4efc39d1d7b5c0!2sTerminal%20Puerta%20Maya!5e0!3m2!1sen!2sus!4v1598638001294!5m2!1sen!2sus"
+                        width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <p>Phone: 123-123-1234</p>
+            <p>Email: support@scoots.com</p>
+            <a href="#"><img src="images/instagram.png" alt="Instagram" height="25" width="25"></a>
+            <a href="#"><img src="images/facebook.png" alt="Facebook" height="25" width="25"></a>
+            <a href="#"><img src="images/twitter.png" alt="Twitter" height="25" width="25"></a>
+        </div>
+        <a href="./attributions.html">References and Sources</a>
+        <p>&copy; Scoots - Your Cozumel Rental Experts</p>
+        <p>Last Modified: <span id="lastModified">placeholder for script: 1/15/25</span></p>
+    </footer>
+</body>
+
+</html>

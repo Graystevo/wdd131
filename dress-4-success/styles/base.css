@@ -1,0 +1,768 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* change the values below to your colors from your palette */
+    --primary-color: #2C6E49;
+    --secondary-color: #FEFEE3;
+    --accent1-color: #4C956C;
+    --accent2-color: #FFC9B9;
+    --accent3-color: #D68C45;
+
+    /* change the values below to your chosen font(s) */
+    --heading-font: "Avenir";
+    --paragraph-font: "Optima";
+
+    /* these colors below should be chosen from among your palette colors above */
+    --headline-color-on-white: #2C6E49;
+    --headline-color-on-color: #FEFEE3;
+    --paragraph-color-on-white: #212529;
+    --paragraph-color-on-color: #FEFEE3;
+    --paragraph-background-color: #2C6E49;
+    --nav-link-color: #FEFEE3;
+    --nav-background-color: #4C956C;
+    --nav-hover-link-color: #FEFEE3;
+    --nav-hover-background-color: #D68C45;
+}
+
+/* Body Styling */
+body {
+    background-color: #ffffff;
+    font-family: var(--paragraph-font);
+}
+
+/* Layout Styling */
+header {
+    padding-top: 15px;
+    background-color: var(--paragraph-background-color);
+    font-family: var(--heading-font);
+}
+
+header h1 {
+    color: var(--headline-color-on-color);
+    font-family: var(--heading-font);
+}
+
+.header-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Single column */
+    grid-auto-rows: auto;
+    gap: 10px;
+    align-items: center;
+    justify-items: center;
+    /* Center content horizontally */
+}
+
+/* Logo Styling */
+.logo {
+    display: flex;
+    /* Aligns the logo image and title horizontally */
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    margin-right: 2.6rem;
+    padding-left: 1rem;
+    /* Space between the logo and title */
+}
+
+.logo img {
+    width: 80px;
+    height: auto;
+}
+
+
+/* Title Styling */
+.header-title {
+    text-align: center;
+}
+
+/* Navigation Styling */
+.header-nav {
+    margin-top: 0;
+    width: 100%;
+    /* Remove negative margin */
+}
+
+
+.header-nav ul {
+    padding: 0;
+    margin: 0;
+}
+
+#menu {
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    color: var(--nav-link-color);
+    cursor: pointer;
+    position: absolute;
+    top: 2.75rem;
+    right: 1.2rem;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "✖";
+}
+
+#mode {
+    position: absolute;
+    top: .98rem;
+    right: 1.2rem;
+    cursor: pointer;
+    color: #FFFFFF;
+    font-size: 1.2rem;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    list-style: none;
+    background-color: var(--nav-background-color);
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.navigation a {
+    display: none;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    gap: 10px;
+    /* Space between links */
+    font-weight: bold;
+}
+
+nav a:link,
+nav a:visited {
+    color: var(--nav-link-color);
+}
+
+.navigation a:hover {
+    color: var(--nav-hover-link-color);
+    background-color: var(--nav-hover-background-color);
+}
+
+.open a {
+    display: block;
+}
+
+/* everything else lole */
+
+h1 {
+    margin: 0px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Single column by default */
+    gap: 10px;
+    /* Space between sections */
+    padding-top: 0;
+    max-width: 1000px;
+    margin: 0 auto;
+    justify-items: center;
+    /* Center columns when single column */
+    /* Adjust based on content */
+}
+
+.content,
+.spotlight-card,
+.information-card {
+    width: 100%;
+}
+
+.content {
+    grid-column: 1;
+}
+
+.hero {
+    margin-top: 0px;
+    position: relative;
+    height: 300px;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.herolabel {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: var(--paragraph-background-color);
+    padding: .5rem;
+    border-radius: 10px;
+}
+
+.herolabel a {
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    text-decoration: none;
+    color: var(--headline-color-on-color);
+}
+
+/* General to all cards */
+.information-card,
+.current-events {
+    background-color: var(--paragraph-background-color);
+    padding: 0px;
+}
+
+/* spotlight card section */
+.spotlight-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.spotlight-card > * {
+    background-color: var(--paragraph-background-color);
+    text-align: center;
+}
+
+.spotlight-card h4 {
+    grid-column: 1/4;
+    text-align: center;
+    background-color: #475a68;
+    font-size: 24px;
+    padding: 10px;
+    margin: 0;
+    color: var(--paragraph-color-on-color);
+    border-bottom: 1px solid black;
+}
+
+/* .spotlight-card ol {
+    list-style-type: decimal-leading-zero;
+    list-style-position: inside;
+    color: var(--paragraph-color-on-color)
+}
+
+.spotlight-card li {
+    margin: 10px;
+} */
+
+.spotlight-card img {
+    max-width: 45%;
+}
+
+.spotlight-card h3 {
+    background-color: #475a68;
+    color: var(--paragraph-color-on-color);
+    font-weight: bold;
+    font-size: 24px;
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+
+.spotlight-card p {
+    margin: 10px;
+    color: var(--paragraph-color-on-color)
+}
+
+/* Weather  section */
+.information-card {
+    text-align: center;
+}
+
+.information-card h3 {
+    background-color: #475a68;
+    color: var(--paragraph-color-on-color);
+    font-weight: bold;
+    font-size: 24px;
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+
+.information-card p {
+    margin: 10px;
+    color: var(--paragraph-color-on-color);
+}
+.information-card li {
+    margin: 10px;
+    padding: 4px;
+    list-style-type: circle;
+    list-style-position: inside;
+    color: var(--paragraph-color-on-color);
+    text-align: left;
+}
+
+#current-weather {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    place-items: center;
+}
+
+#current-weather h4{
+    color: var(--headline-color-on-color);
+    grid-row: 1;
+    grid-column: 1/3;
+    font-weight: bold;
+    text-decoration: underline;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 1.2em;
+    background-color: #475a68;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    width: 100%;
+}
+
+#forecast {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    place-items: center;
+}
+
+#forecast h3{
+    color: var(--headline-color-on-color);
+    grid-row: 1;
+    grid-column: 1/4;
+    font-weight: bold;
+    padding: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #475a68;
+    width: 100%;
+}
+
+.forecast-day {
+    max-width: 60%;
+    grid-column: 1/4;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    font-weight: normal;
+    /* background-color: var(--paragraph-color-on-white); */
+}
+
+.forecast-day p:first-of-type {
+    grid-column: span 2;
+    grid-row: 1;
+    font-size: 1.1em;
+    text-decoration: underline;
+}
+.forecast-day img:first-of-type {
+    grid-column: span 2;
+    grid-row: 3;
+}
+
+
+/* Footer Styling */
+footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+footer .social-links img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+footer a {
+    display: contents;
+}
+
+.images-of-stgeorge {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    gap: 20px;
+    background-color: #0f4c81;
+    padding: 10px;
+    border: 2px solid black;
+}
+
+.images-of-stgeorge img {
+    max-width: 1000px;
+    width: 100%;
+    height: auto;
+}
+
+.picture-container {
+    width: 100%;
+    aspect-ratio: 800 / 500;
+    /* Matches your image dimensions */
+    position: relative;
+    overflow: hidden;
+}
+
+.picture-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#calendar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+}
+
+.calendar {
+    padding: 20px;
+    background-color: #0f4c81;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #FFFFFF;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 5px;
+    text-align: center;
+}
+
+.calendar-days div {
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.calendar button {
+    color: #FFFFFF;
+    background-color: #d55227;
+    padding: 5px;
+    border: solid 1px black;
+}
+
+.calendar button:hover {
+    color: #212529;
+    background-color: #98C1D9;
+}
+
+.calendar-days div:hover {
+    background-color: #686868;
+}
+
+#days div.active {
+    background-color: #0f4c81;
+    color: #EE6C4D;
+}
+
+#days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-top: 5px;
+    border: solid 1px black;
+    min-height: 200px;
+    /* Reserve space for calendar */
+}
+
+#days div {
+    text-align: center;
+    padding: 10px;
+    border: solid 1px black;
+}
+
+#days div:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.visits {
+    border: solid black 2px;
+    padding: 20px;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #0f4c81;
+    font-size: 2rem;
+    min-height: 50px;
+}
+
+.left-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.left-bar>* {
+    box-sizing: border-box;
+    border: 2px solid black;
+    padding: 10px;
+}
+
+/* ================== rental Application Specific Styles ================== */
+.rental {
+    background-color: #fff;
+    padding: 10px;
+}
+
+.rental form {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.rental .form-container {
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+}
+
+.rental form label {
+    color: var(--headline-color-on-white);
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: bold;
+}
+.full-width {
+    padding: 10px;
+    grid-column: 1 / -1;
+}
+
+.rental form input,
+.rental form textarea,
+.rental form select {
+    margin-bottom: 10px;
+    border: 0;
+    border-bottom: 1px solid black;
+    font-size: 1.1rem;
+    width: 250px;
+}
+
+.rental form input:focus,
+.rental form textarea:focus,
+.rental form select:focus {
+    outline: none;
+}
+
+.rental form input::placeholder,
+.rental form textarea::placeholder {
+    font-size: 13px;
+}
+
+/* Append an asterisk for required fields */
+.rental form label:has(input[required]),
+.rental form label:has(textarea[required]),
+.rental form label:has(select[required])::after {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--headline-color-on-white);
+}
+
+button {
+    margin: 10px;
+}
+
+.benefits {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    text-align: center;
+
+    padding-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.benefits h3 {
+    color: var(--headline-color-on-white);
+}
+
+.menu {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #bed;
+    text-align: center;
+}
+
+.menu button {
+    padding: 1rem;
+    font-weight: 700;
+}
+
+button.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    justify-items: center;
+}
+
+.grid section {
+    text-align: center;
+    width: 80%;
+    height: 100%;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.grid section a {
+    align-items: center;
+}
+
+.grid img {
+    width: 100px;
+    box-shadow: 0 0 5px #333;
+}
+
+.grid h3 {
+    font-family: "Caveat", cursive;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+
+.list section>* {
+    margin: 0 1rem;
+}
+
+.list section img {
+    display: none;
+    /* smaller viewports only */
+}
+
+.list section h3 {
+    font-size: 1rem;
+    font-family: Roboto, Helvetica, sans-serif;
+}
+
+.list section:nth-child(even) {
+    background-color: #bed;
+}
+
+section h3 {
+    font-size: 1.5rem;
+}
+
+section p {
+    font-weight: 600;
+    font-size: smaller;
+}
+
+section a {
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 0.85rem;
+    color: navy;
+    letter-spacing: 1.1pt;
+}
+
+.banner {
+    width: 100%;
+    background-color: #f9edbe;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.banner p {
+    color: var(--paragraph-color-on-white);
+    font-size: 1.2rem;
+    text-align: center;
+    flex-grow: 1;
+}
+
+#close-banner {
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+table {
+    margin: 10px;
+    max-width: 100%;
+    border: 1px solid black;
+}
+td {
+    border: 1px solid black;
+}
+
+.contact-info > *{
+    padding: 10px;
+}
+
+.contact-info, .map-container, .contact-form {
+    margin-bottom: 2rem;
+    margin: 10px;
+}
+
+.map-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.map-grid .map {
+    text-align: center;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact-form form label {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+}
+
+.contact-form form input,
+.contact-form form textarea {
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+.contact-form form button {
+    padding: 0.75rem;
+    font-size: 1rem;
+    cursor: pointer;
+    align-self: center;
+}
+
+.map-container h2{
+    text-align: center;
+    text-decoration: underline;
+    margin: 10px;
+}

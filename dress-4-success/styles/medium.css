@@ -1,0 +1,182 @@
+/* Larger Views ******************************/
+@media (min-width: 840px) {
+    .header-nav ul {
+        flex-direction: row;
+        /* Arrange links horizontally */
+        gap: 20px;
+    }
+
+    #menu {
+        display: none;
+        /* hide hamburger button */
+    }
+
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .content {
+        grid-column: 1/4;
+    }
+
+    .spotlight-card {
+        grid-template-columns: 1fr;
+        grid-column: 1/3;
+        grid-row: 2;
+        border: none;
+    }
+
+    .spotlight-card > * {
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.6);
+    }
+
+    .information-card {
+        grid-column: 3/4;
+        grid-row: 2;
+        align-self: start;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+        max-width: 275px;
+    }
+
+    .left-bar {
+        grid-column: 1/2;
+        grid-row: 1/4;
+    }
+
+    #calendar {
+        grid-column: 1/2;
+        grid-row: 3/4;
+        margin: 0;
+        padding: 0;
+        height: auto;
+    }
+
+    .population {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        margin: 0;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .main-attraction {
+        grid-column: 2/3;
+        grid-row: 2/3;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .images-of-stgeorge {
+        grid-column: 2/4;
+        grid-row: 1/4;
+        height: auto;
+        gap: 20px;
+        background-color: #0f4c81;
+        margin-top: 10px;
+    }
+
+    .images-of-stgeorge img:hover {
+        box-shadow: 0 0 100px #333;
+    }
+
+    .visits {
+        grid-column: 1/4;
+        grid-row: 1/2;
+        font-size: 2rem;
+
+    }
+
+    .rental h1 {
+        grid-column: 1/4;
+        grid-row: 1;
+    }
+
+    .rental .form-container {
+        grid-column: 2/3;
+        grid-row: 2;
+        max-width: 600px;
+    }
+
+    .benefits {
+        width: 95%;
+    }
+
+    .business-directory {
+        grid-column: 1/4;
+    }
+
+    .menu {
+        grid-column: 1/4;
+        max-height: 75px;
+    }
+
+    .list {
+        grid-column: 1/4;
+    }
+
+    .list section {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+    }
+
+    .list .details {
+        display: grid;
+        grid-template-columns: 1fr 1fr 2fr;
+        gap: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+    }
+
+    .details p:nth-child(1) {
+        grid-column: 1;
+    }
+
+    /* Address */
+    .details p:nth-child(2) {
+        grid-column: 2;
+    }
+
+    /* Phone */
+    .list .details p:nth-child(3) {
+        grid-column: 3;
+        text-align: left;
+    }
+
+    .grid {
+        grid-column: 1/4;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 20px;
+        align-items: center;
+    }
+
+    .rental-page{
+        text-align: center;
+    }
+    .rental-page h2{
+        grid-column: 1/5;
+        padding: 20px;
+    }
+    .rental-page table{
+        grid-column: 1/2;
+    }
+    .rental-page .information-card{
+        grid-column: 2/5;
+        margin-top: 10px;
+        margin-right: 10px;
+        max-width: 725px;
+        text-align: center;
+        
+    }
+    .rental-page .information-card ul > *{
+        text-align: justify;
+    }
+
+    .map-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+    .map-container{
+        grid-column: 1/3;
+    }
+}
